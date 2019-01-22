@@ -6,8 +6,8 @@ class ButtonSection extends Component {
   render() {
     return (
       <div className="ButtonSection">
-        {this.props.buttons.map((value, i) => {
-          return <Button value={value} key={i} handler={this.props.handler} />;
+        {this.props.buttons.map((object, i) => {
+          return <Button value={object.value} key={i} id={object.identifier} handler={this.props.handler} />;
         })}
       </div>
     );

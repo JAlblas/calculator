@@ -4,7 +4,7 @@ import './Display.scss';
 class Display extends Component {
   render() {
     return (
-      <div className="Display">
+      <div className="Display" id="display">
         <p>{this.props.value}</p>
       </div>
     );
