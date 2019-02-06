@@ -77,6 +77,14 @@ class App extends Component {
 
       }
     } else {
+      if (value === "." && this.state.displayValue.indexOf(".") > -1) {
+        return;
+      }
+
+      if (value === "0" && this.state.displayValue.indexOf("0") > -1) {
+        return;
+      }
+
       // If number is typed, or dot
       if (this.state.operation === "") {
         this.setState({value1:  this.state.value1 + value, displayValue: this.state.displayValue + value});
