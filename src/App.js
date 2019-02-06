@@ -29,24 +29,40 @@ class App extends Component {
 
   handleClick(value, event) {
 
-    console.log(value);
-
     if(value === "%" || value === "x" || value === "-" || value === "+"
       || value === "=" || value === "C" ) {
 
 
       if (value !== "=") {
         if (value === "C") {
+
           this.setState({value1: "", value2: "", operation: "", displayValue: ""});
-        } else if (value === "+") {
+        } else {
+
           this.setState({operation: value});
-        } else if (value === "-") {
-          this.setState({operation: value});
-        } else if (value === "x") {
-          this.setState({operation: value});
-        } else if (value === "%") {
-          this.setState({operation: value});
+          if (this.state.value1 !== "" && this.state.value2 !== "") {
+            if (this.state.operation === "+") {
+              this.setState({displayValue: parseFloat(this.state.value1) + parseFloat(this.state.value2),
+                value1: parseFloat(this.state.value1) + parseFloat(this.state.value2),
+                value2: ""});
+            } else if (this.state.operation === "-") {
+              this.setState({displayValue: parseFloat(this.state.value1) - parseFloat(this.state.value2),
+                value1: parseFloat(this.state.value1) - parseFloat(this.state.value2),
+                value2: ""});
+            } else if (this.state.operation === "x") {
+              this.setState({displayValue: parseFloat(this.state.value1) * parseFloat(this.state.value2),
+                value1: parseFloat(this.state.value1) * parseFloat(this.state.value2),
+                value2: ""});
+            } else if (this.state.operation === "%") {
+              this.setState({displayValue: parseFloat(this.state.value1) / parseFloat(this.state.value2),
+                value1: parseFloat(this.state.value1) / parseFloat(this.state.value2),
+                value2: ""});
+            }
+          }
+
+
         }
+
       } else {
         // = - Calculate
         if (this.state.operation === "+") {
