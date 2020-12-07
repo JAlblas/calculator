@@ -1,18 +1,18 @@
 .Button {
-  width: 90px;
-  height:40px;
-  display: inline-block;
   background-color: #EFEFEF;
   color: #000;
   border: 1px solid #000;
   border-radius: 5px;
-  margin: 10px;
-  padding: 5px;
+  padding: 10px;
   font-weight: 600;
   font-size: 1em;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .Button:hover {
     background-color: #BBB;
+}
+
+#clear {
+  grid-column: 1 / 5;
 }

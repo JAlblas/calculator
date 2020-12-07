@@ -35,7 +35,6 @@ class App extends Component {
 
       if (value !== "=") {
         if (value === "C") {
-
           this.setState({value1: "", value2: "", operation: "", displayValue: ""});
         } else {
 
@@ -59,8 +58,6 @@ class App extends Component {
                 value2: ""});
             }
           }
-
-
         }
 
       } else {
@@ -69,26 +66,22 @@ class App extends Component {
           this.setState({displayValue: parseFloat(this.state.value1) + parseFloat(this.state.value2),
             value1: parseFloat(this.state.value1) + parseFloat(this.state.value2),
             value2: "",
-            operation: ""}, () =>
-            console.log(this.state));
+            operation: ""});
         } else if (this.state.operation === "-") {
           this.setState({displayValue: parseFloat(this.state.value1) - parseFloat(this.state.value2),
             value1: parseFloat(this.state.value1) - parseFloat(this.state.value2),
             value2: "",
-            operation: ""}, () =>
-              console.log(this.state));
+            operation: ""});
         } else if (this.state.operation === "x") {
           this.setState({displayValue: parseFloat(this.state.value1) * parseFloat(this.state.value2),
             value1: parseFloat(this.state.value1) * parseFloat(this.state.value2),
             value2: "",
-            operation: ""}, () =>
-              console.log(this.state));
+            operation: ""});
         } else if (this.state.operation === "%") {
           this.setState({displayValue: parseFloat(this.state.value1) / parseFloat(this.state.value2),
             value1: parseFloat(this.state.value1) / parseFloat(this.state.value2),
             value2: "",
-            operation: ""}, () =>
-              console.log(this.state));
+            operation: ""});
         }
 
       }

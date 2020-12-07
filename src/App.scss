@@ -8,4 +8,11 @@
   border-radius: 10px;
   background-color: rgb(50, 99, 102);
   color: #FFF;
+  
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  column-gap: 10px;
+  row-gap: 15px;
+
 }
